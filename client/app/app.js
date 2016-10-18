@@ -3,10 +3,10 @@
 
     var app = angular.module('myApp', ['ui.router','ngResource']);
 
-    app.config(['$stateProvider', '$locationProvider', '$httpProvider', Config]);
+    app.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', Config]);
     app.run(['$rootScope', '$location', '$http', '$q', Run]);
 
-    function Config ($stateProvider, $locationProvider) {
+    function Config ($stateProvider, $locationProvider, $urlRouterProvider) {
 
         $stateProvider
             .state('news', {
@@ -33,6 +33,8 @@
                     }]
                 }
             });
+
+        $urlRouterProvider.otherwise('/');
 
         $locationProvider.html5Mode({requireBase: false, enabled: true});
 
