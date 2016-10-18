@@ -1,6 +1,6 @@
 Dependencies install
 
-$ git clone https://github.com/neverminderer1/news-app.git <br />
+> $ git clone https://github.com/neverminderer1/news-app.git <br />
 > $ cd newsApp <br />
 > $ npm i <br />
 > $ cd client && bower i <br />
