@@ -8,10 +8,13 @@ exports.index = function (req, res, next) {
 
     readJSONFile(process.cwd() + '/server/news.json', function (err, json) {
 
-        if (err) { next (err); }
-
-        if (json.news.length) {
+        if (json && json.news && json.news.length) {
             return res.status(200).json({data: json.news});
+        }
+
+        if (err) {
+            res.status(404).send('Requested data not found');
+            return next(err);
         }
 
         return res.status(404).send('Requested data not found');
@@ -23,14 +26,20 @@ exports.index = function (req, res, next) {
 exports.get = function (req, res, next) {
 
     readJSONFile(process.cwd() + '/server/news.json', function (err, news) {
-        if (err) { next (err); }
 
-        var item = _.find(news.news, function(item) {
-            return parseInt(item.id) === parseInt(req.params.id);
-        });
+        if (news && news.news) {
+            var item = _.find(news.news, function(item) {
+                return parseInt(item.id) === parseInt(req.params.id);
+            });
 
-        if (item) {
-            return res.status(200).json({data: item});
+            if (item) {
+                return res.status(200).json({data: item});
+            }
+        }
+
+        if (err) {
+            res.status(404).send('Requested data not found');
+            return next(err);
         }
 
         return res.status(404).send('Requested data not found');
