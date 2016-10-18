@@ -1,0 +1,23 @@
+{
+  "name": "new-app",
+  "version": "0.0.0",
+  "authors": [
+    "Evhenii Baranov"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.5.*",
+    "angular-route": "1.5.*",
+    "angular-resource": "1.5.*",
+    "angular-sanitize": "1.5.*",
+    "angular-animate": "1.5.*",
+    "angular-bootstrap": "~0.14.3",
+    "angular-moment": "~0.10.3",
+    "angular-ui-router": "0.3.1",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6"
+  }
+}
