@@ -1,0 +1,7 @@
+.idea
+*.exe
+*.log
+local
+*.xml
+node_modules
+.DS_Store

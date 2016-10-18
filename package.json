@@ -1,0 +1,21 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "server/app.js"
+  },
+  "author": "baranov evhenii",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "async": "^1.4.2",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-nodemon": "^2.0.2",
+    "lodash": "^3.10.1"
+  }
+}
