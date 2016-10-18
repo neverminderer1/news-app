@@ -1,13 +1,21 @@
-Dependencies install
+#### This repository was checked with the next versions of software
 
-> $ git clone https://github.com/neverminderer1/news-app.git <br />
-> $ cd news-app <br />
-> $ npm i <br />
-> $ cd client && bower i <br />
-> $ cd .. <br />
+* Node.js v5.12.7
+* Npm of any version
 
+#### Dependencies install
 
-Run
+``` npm i -g gulp bower forever```
 
-Command "gulp" in the project repository starts the server.<br />
-App works on http://localhost:8100.
+```
+$ git clone https://github.com/neverminderer1/news-app.git
+$ cd news-app
+$ npm i
+$ cd client && bower i
+$ cd ..
+```
+
+#### Run
+
+* Command "gulp" in the project repository starts the server.
+* App works on http://localhost:8100.
